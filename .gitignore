@@ -1,0 +1,6 @@
+*.buildpath
+*.project
+*.settings/*
+
+
+/ride-lib-template-twig/.settings/nbproject/private/
