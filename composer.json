@@ -11,7 +11,7 @@
     ],
     "require": {
         "ride/lib-system": ">=0.2.0",
-        "ride/lib-template": ">=0.3.0",
+        "ride/lib-template": ">=0.4.0",
         "twig/twig": "v1.15.1"
     },
     "autoload": {

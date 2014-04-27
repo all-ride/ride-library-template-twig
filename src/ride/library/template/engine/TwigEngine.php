@@ -2,7 +2,6 @@
 
 namespace ride\library\template\engine;
 
-use ride\library\template\theme\ThemeModel;
 use ride\library\template\Template;
 use ride\library\template\ThemedTemplate;
 use ride\library\system\file\File;
@@ -47,7 +46,7 @@ class TwigEngine extends AbstractEngine {
      * the compiled templates
      * @return null
      */
-    public function __construct(TwigLoader $loader, File $compileDirectory, ThemeModel $themeModel) {
+    public function __construct(TwigLoader $loader, File $compileDirectory) {
         $compileDirectory->create();
 
         $this->loader = $loader;
@@ -55,8 +54,6 @@ class TwigEngine extends AbstractEngine {
             'cache' => $compileDirectory->getPath(),
             'auto_reload' => true,
         ));
-
-        $this->setThemeModel($themeModel);
     }
 
     /**
