@@ -27,6 +27,18 @@ class TwigEngine extends AbstractEngine {
     const EXTENSION = 'twig';
 
     /**
+     * Tag to open a block comment
+     * @var string
+     */
+    const COMMENT_OPEN = '{#';
+
+    /**
+     * Tag to close a block comment
+     * @var string
+     */
+    const COMMENT_CLOSE = '#}';
+
+    /**
      * Instance of the Twig engine
      * @var Twig_Environment
      */
@@ -113,7 +125,8 @@ class TwigEngine extends AbstractEngine {
      * Gets the template resource
      * @param \ride\library\template\Template $template Template to get the
      * resource of
-     * @return string Absolute path of the template resource
+     * @return \ride\library\system\file\File $file File instance for the
+     * template resource
      * @throws \ride\library\template\exception\ResourceNotSetException when
      * no template was set to the template
      * @throws \ride\library\template\exception\ResourceNotFoundException when
@@ -127,9 +140,7 @@ class TwigEngine extends AbstractEngine {
 
         $this->preProcess($template);
 
-        $file = $this->loader->getFile($resource);
-
-        return $file->getAbsolutePath();
+        return $this->loader->getFile($resource);
     }
 
     /**

@@ -2,7 +2,7 @@
     "name": "ride/lib-template-twig",
     "description": "Twig engine for the template library of the Ride framework.",
     "license": "MIT",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "authors": [
         {
             "name": "Joris Vandeweerd",
@@ -11,7 +11,7 @@
     ],
     "require": {
         "ride/lib-system": ">=0.2.0",
-        "ride/lib-template": ">=0.5.0",
+        "ride/lib-template": ">=0.6.0",
         "twig/twig": "v1.15.1"
     },
     "autoload": {
